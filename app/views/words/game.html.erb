@@ -1,0 +1,16 @@
+<h1>Here is your grid:</h1>
+<h2>
+  <%@word_grid.each do |letter| %>
+    <%= letter %>
+  <% end %>
+</h2>
+
+
+<form action="/score" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <input type="text" name="user_word" placeholder="What is your longest word?">
+  <input type="submit">
+  <input type="hidden" name="start_time" value="<%=@start_time%>" >
+  <input type="hidden" name="grid" value="<%=@word_grid%>" >
+
+</form>

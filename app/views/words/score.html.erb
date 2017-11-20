@@ -1,0 +1,12 @@
+<h1>Words#score</h1>
+<p>Find me in app/views/words/score.html.erb</p>
+<h2>Your grid:
+  <%@grid.each do |letter| %>
+    <%= letter %>
+  <% end %>
+  </h2>
+<h2>Your word: <%= @user_word %></h2>
+<h2><%= @start_time %></h2>
+<h2>Time Taken to answer: <%= @result[:time] %> seconds</h2>
+<h2>Your score: <%= @result[:score] %></h2>
+<h2>Message: <%= @result[:message] %></h2>
